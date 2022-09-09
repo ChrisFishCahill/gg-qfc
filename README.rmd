@@ -4,6 +4,8 @@ output:
     variant: markdown_github
 ---
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -11,7 +13,8 @@ knitr::opts_chunk$set(
   fig.path = "README-figs/"
 )
 ```
-# gg-theme-qfc
+
+# ggqfc
 
 Contains a simple theme for ggplot2, `theme_qfc()`, that loosely resembles nicely themed plots (to my taste) from R base graphics. The theme builds on `ggplot2::theme_light()`, and borrows heavily from Sean Anderson's ggsidekick(). 
 
@@ -34,7 +37,6 @@ library(ggplot2)
 ggplot(warpbreaks, aes(tension, breaks)) + 
   geom_violin(fill = "grey90", col = NA) +
   geom_jitter(width = 0.1, height = 0, alpha = 0.7) +
-  facet_wrap(~wool) + 
-  labs(x = "Tension", y = "Breaks") +
+  facet_wrap(~wool) + labs(x = "Tension", y = "Breaks") +
   theme_qfc() # magic happens here
 ```
