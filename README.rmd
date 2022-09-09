@@ -4,8 +4,6 @@ output:
     variant: markdown_github
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -21,7 +19,7 @@ Installing:
 
 ```{r, eval=FALSE}
 # install.packages("devtools")
-devtools::install_github("ChrisFishCahill/ggqfc")
+devtools::install_github("ChrisFishCahill/gg-qfc")
 ```
 
 Exciting demo with dataset showing the number of breaks in yarn during weaving for 2 yarn types and 3 tension levels:
@@ -31,7 +29,7 @@ set.seed(1)
 ```
 
 ```{r example, fig.width=5.5, fig.height=3.6, fig.retina=2}
-library(gg-theme-qfc)
+library(ggqfc)
 library(ggplot2)
 ggplot(warpbreaks, aes(tension, breaks)) + 
   geom_violin(fill = "grey90", col = NA) +
